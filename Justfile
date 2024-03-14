@@ -73,12 +73,9 @@ switch-client:
 # Run the full E2E flow by setting the contracts, deploying them, creating a channel, and sending a packet
 # Usage: just do-it
 do-it:
-    echo "Running the full E2E flow..."
-    just set-contracts optimism XCounter false && just set-contracts base XCounter false
+    echo "Deploy the LotteryUC contracts on optimism and base chains..."
+    just set-contracts optimism LotteryUC true && just set-contracts base LotteryUC true
     just deploy optimism base
-    just sanity-check
-    just create-channel
-    just send-packet optimism
     echo "You've done it!"
 
 # Clean up the environment by removing the artifacts and cache folders and running the forge clean command
