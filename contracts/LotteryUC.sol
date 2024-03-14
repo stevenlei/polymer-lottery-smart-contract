@@ -40,7 +40,7 @@ contract LotteryUC is UniversalChanIbcApp {
 
     // 2 hours per round
     // Debug: 300 seconds per round
-    uint32 PER_ROUND_SECONDS = 120;
+    uint32 PER_ROUND_SECONDS = 300;
 
     // events
     event LotteryStarted(uint256 startTime);
